@@ -1,0 +1,17 @@
+# run docker locally in container
+version: '2'
+services:   
+    reindeer-service-container:
+        container_name: reindeer-service-container
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: reindeer-service-image:latest
+        ports:
+            - 8080:8080
+        networks:
+            - spring-cloud-network
+
+networks:
+    spring-cloud-network:
+        driver: bridge
