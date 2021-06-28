@@ -13,8 +13,8 @@ spec:
         app.kubernetes.io/name: reindeer-app
     spec:
       containers:
-      - image: reindeer-service-image
-        imagePullPolicy: IfNotPresent # looks for image locally, then at configured public registries
-        name: reindeer-service-container
-        ports:
-        - containerPort: 8080
+        - image: gcr.io/gks-sample/reindeer-service-image:v1
+          imagePullPolicy: IfNotPresent # looks for image locally, then at configured public registries
+          name: reindeer-service-container
+          ports:
+            - containerPort: 8080

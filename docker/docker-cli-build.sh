@@ -1,1 +1,1 @@
-docker build -f Dockerfile -t reindeer-service-image ../.
+docker build -f Dockerfile -t gcr.io/${PROJECT_ID}/reindeer-service-image:v1 ../.
